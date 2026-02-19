@@ -52,7 +52,7 @@
     <input type="text" formControlName="country" />
   </div>
   <br/>
-  <button style="background: lightblue; font-size: 18px;padding: 5px;" (click)="updateUserData()">
+  <button style="background: lightblue; font-size: 18px;padding: 5px;" type="button" (click)="updateUserData()">
     Update with default data
   </button>
   <br/>
@@ -88,7 +88,7 @@
       <input style="width: 100%;" [placeholder]="'Address Line -' + (i + 1)" type="text" [formControlName]="i" />
       @if(i=== addressLines.controls.length - 1) {
         <br/>
-        <button style="background: lightblue; float:right" (click)="addNewAddressLine()"> Add +</button>
+        <button style="background: lightblue; float:right" type="button" (click)="addNewAddressLine()"> Add +</button>
       }
     }
   </div>
