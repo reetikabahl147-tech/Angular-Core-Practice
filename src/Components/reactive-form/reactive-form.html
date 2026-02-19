@@ -1,0 +1,33 @@
+<h1>Reactive Form using form group</h1>
+<form
+  [formGroup]="form1"
+  (ngSubmit)="submitForm1()"
+  style="
+    border: 1px solid grey;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  "
+>
+  <label>Name : </label>
+  <input type="text" formControlName="name" />
+  <br />
+  <label>Age : </label>
+  <input type="number" formControlName="age" />
+  <br />
+  <label>Gender : </label>
+  <div>
+    <label>Male</label>
+    <input type="radio" value="male" formControlName="gender" />
+    <label>Female</label>
+    <input type="radio" value="female" formControlName="gender" />
+  </div>
+  <br />
+  <button
+    style="background: green; font-size: 20px"
+    type="submit"
+    [disabled]="form1.invalid"
+  >
+    Submit
+  </button>
+</form>
